@@ -7,11 +7,11 @@ const HomePage = () => {
   return (
     <Container maxWidth="lg">
       <Typography variant="h4" sx={{ mt: 4}} gutterBottom>
-        Find Your Next Sports Event
+        Find Your Next Sports Trip
       </Typography>
       <SearchBar />
       <Typography variant="h5" gutterBottom>
-        Upcoming Sports Events
+        Upcoming Sports Trips
       </Typography>
       <Grid container spacing={3}>
         {sportsData.map(event => (
@@ -29,6 +29,7 @@ const HomePage = () => {
                 <Typography>{event.description}</Typography>
                 <Typography>{event.date}</Typography>
                 <Typography>{event.location}</Typography>
+                <Typography>{event.price} €</Typography>
               </CardContent>
             </Card>
           </Grid>

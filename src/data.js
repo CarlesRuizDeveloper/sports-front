@@ -7,6 +7,7 @@ export const sportsData = [
       date: '2024-08-01',
       location: 'Stadium A',
       image: 'https://via.placeholder.com/140',
+      price: 900,
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ export const sportsData = [
       date: '2024-08-15',
       location: 'Arena B',
       image: 'https://via.placeholder.com/140',
+      price: 1350,
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ export const sportsData = [
       date: '2024-09-05',
       location: 'Court C',
       image: 'https://via.placeholder.com/140',
+      price: 3500,
     },
   ];
   

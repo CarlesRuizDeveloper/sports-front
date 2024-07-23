@@ -6,7 +6,7 @@ const Footer = () => {
     <footer style={{ marginTop: '20px', padding: '10px 0', backgroundColor: '#3f51b5', color: 'white' }}>
       <Container maxWidth="lg">
         <Typography variant="body1" align="center">
-          © 2024 Sports Booking. All Rights Reserved.
+          © 2024 Sports Trips. All Rights Reserved.
         </Typography>
       </Container>
     </footer>
