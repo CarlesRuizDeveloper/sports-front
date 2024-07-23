@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import SearchBar from './SearchBar';
-import { sportsData } from '../data';
 
 const HomePage = () => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/events')
+      .then(response => setEvents(response.data))
+      .catch(error => console.error(error));
+  }, []);
+
   return (
     <Container maxWidth="lg">
-      <Typography variant="h4" sx={{ mt: 4}} gutterBottom>
+      <Typography variant="h4" sx={{ mt: 4 }} gutterBottom>
         Find Your Next Sports Trip
       </Typography>
       <SearchBar />
@@ -14,7 +22,7 @@ const HomePage = () => {
         Upcoming Sports Trips
       </Typography>
       <Grid container spacing={3}>
-        {sportsData.map(event => (
+        {events.map(event => (
           <Grid item xs={12} md={4} key={event.id}>
             <Card>
               <CardMedia
