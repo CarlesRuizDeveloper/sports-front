@@ -61,7 +61,7 @@ const SearchBar = () => {
             >
               {[...Array(15).keys()].map((option) => (
                 <MenuItem key={option + 1} value={option + 1}>
-                  {option + 1} {option + 1 === 1 ? 'Adults' : 'Adults'}
+                  {option + 1} {option + 1 === 1 }
                 </MenuItem>
               ))}
             </TextField>
@@ -70,14 +70,14 @@ const SearchBar = () => {
             <TextField
               select
               fullWidth
-              label="Children"
+              label="Kids"
               variant="outlined"
               value={children}
               onChange={(e) => setChildren(e.target.value)}
             >
               {[...Array(15).keys()].map((option) => (
                 <MenuItem key={option + 1} value={option + 1}>
-                  {option + 1} {option + 1 === 1 ? 'Children' : 'Children'}
+                  {option + 1} {option + 1 === 1 }
                 </MenuItem>
               ))}
             </TextField>
